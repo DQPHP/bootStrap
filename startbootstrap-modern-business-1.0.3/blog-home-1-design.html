@@ -31,16 +31,33 @@
   body{
         background-color: #f1f4f9;
       }
-  h3 a{
+  h4 a{
         color: #4e5e6a;
+        font-weight: bold;
     }
   .col-md-5{
     background-color:white;
     padding: 28px;
     margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-left-style: outset;
+    border-left-color: #3498db;
+    height: 300px;
+    box-shadow: 1px 1px 2px grey;
     }
-
-
+  .col-md-5 > a{
+    border-radius: 25px;
+  }
+  .blog-widget{
+    position: absolute;
+    top:250px;
+    height: 50px;
+    width: auto;
+    background-color: #ecf0f1;
+  }
+  .blog-widget > a {
+  }
 </style>
 
 </head>
@@ -154,48 +171,60 @@
         <div class="row">
 
             <!-- Blog Entries Column -->
-            <div class="col-md-10">
-                <div class="col-md-5  col-md-offset-0">
-                  <h3><a href="#">Blog Post Title</a></h3>
-                  <p><i class="fa fa-clock-o"></i> Posted on August 28, 2013 at 10:00 PM</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-                </div>
-
-              <div class="col-md-offset-1 col-md-5">
-                <h3><a href="#">Blog Post Title</a></h3>
-                <p><i class="fa fa-clock-o"></i> Posted on August 28, 2013 at 10:00 PM</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-              </div>
-
-
-                <div class="col-md-5  col-md-offset-0">
-                  <h3><a href="#">Blog Post Title</a></h3>
-                  <p><i class="fa fa-clock-o"></i> Posted on August 28, 2013 at 10:00 PM</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-                </div>
-
-              <div class="col-md-offset-1 col-md-5">
-                <h3><a href="#">Blog Post Title</a></h3>
-                <p><i class="fa fa-clock-o"></i> Posted on August 28, 2013 at 10:00 PM</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-              </div>
-            </div>
-
-            <div class="col-md-2">
-              <!-- Blog Search Well -->
-              <div class="well">
-                  <h4>Blog Search</h4>
-                  <div class="input-group">
-                      <input type="text" class="form-control">
-                      <span class="input-group-btn">
-                          <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-                      </span>
+            <div class="col-md-12">
+                <div class="col-md-5">
+                  <h4><a href="#">撰写【志望動機】的注意事项</a></h4>
+                  <p><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</p>
+                  <p>
+                    在志望動機中，大部分学生都有自己固定的アピール用语。因为在企业自己的网页中常有看似可以在面试中加以引用的短语，很多学生就有了“こういうこと言えば良いんだ”这样的误解。这次我们就以NG志望動機的常见错误为例，来讲一讲其中的注意事项。
+                  </p>
                   </div>
-                  <!-- /.input-group -->
+
+              <div class="col-md-5">
+                <h4><a href="#">【ES策划】ES通关的NB方法</a></h4>
+                <p>
+                  <i class="fa fa-clock-o"></i> 2015.05.01 P.M.18:00 &nbsp; &nbsp; <i class="fa fa-eye"> 1000+ &nbsp; &nbsp; <i class="fa fa-comments"><a href=#> 66</a> </i>  &nbsp; &nbsp; </i> &nbsp; &nbsp; <i class="fa fa-heart"> 20</i>
+                </p><!-- description -->
+                <p>所有公司的招聘过程都是从提交ES开始，通过这一关，我们才能得到机会向公司展现自己的实力。今天，我们就来谈一谈ES通关的方法，虽然不是绝对，但希望能帮助大家更快的进入到就职过程的下一个阶段。</p>
+                  <a class="btn btn-danger btn-lg" href=#>继续阅读</a>
+                <div class="col-md-4 blog-widget">
+
+                </div>
+
+              </div>
+
+
+                <div class="col-md-5">
+                  <h4><a href="#">如何在说明会上脱颖而出</a></h4>
+                  <p><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</p>
+                  <p>所以这期的专栏主要是给大家讲讲如何在说明会上脱颖而出，并且可以在人事面前给予自己加分。</p>
+                </div>
+
+              <div class="col-md-5">
+                <h4><a href="#">日本的电力现状</a></h4>
+                <p><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</p>
+                <p>
+                  今天的日经头条讲的是日本将在福井县开展核电站的废炉的整理工作。这必然是一件非常漫长和严谨的工作，因为其处理的对象是核电站。即使这些核电站已经停止工作，迈入废弃的行列当中，但如何处理这些留在炉里的高危险物质其实是需要非常谨慎的。
+                </p>
               </div>
             </div>
           </div>
 
+<div class="row">
+  <div class="col-md-4">
+    <!-- Blog Search Well -->
+    <div class="well">
+        <h4>Blog Search</h4>
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+        <!-- /.input-group -->
+    </div>
+  </div>
+</div>
 
 
 
