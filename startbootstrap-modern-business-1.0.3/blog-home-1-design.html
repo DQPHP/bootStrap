@@ -28,36 +28,106 @@
     <![endif]-->
 <style>
 
+ .fa-eye, .fa-comments, .fa-heart, .fa-expand {
+   color: #bdc3c7;
+   padding-right: 2px; /* distance between icon and text*/
+ }
+
   body{
         background-color: #f1f4f9;
       }
   h4 a{
-        color: #4e5e6a;
+        color: #444444;
         font-weight: bold;
     }
   .col-md-5{
     background-color:white;
-    padding: 28px;
+    padding: 25px;
+    padding-top: 10px;
+    padding-right: 5px;
     margin-bottom: 10px;
     margin-left: 5px;
     margin-right: 5px;
     border-left-style: outset;
     border-left-color: #3498db;
-    height: 300px;
+    height: 230px;
     box-shadow: 1px 1px 2px grey;
     }
-  .col-md-5 > a{
+  .col-md-5 > h6{
+    color: #bdc3c7;
+  }
+
+  .markdown{
+    float:right;
     border-radius: 25px;
-  }
-  .blog-widget{
-    position: absolute;
-    top:250px;
-    height: 50px;
+  }/* define the position of remark icon*/
+
+  .icon-tools{
+    position:absolute;
+    top:200px;
+    height: 15px;
     width: auto;
-    background-color: #ecf0f1;
+    list-style-type: none;
+    padding-left: 0px;
   }
-  .blog-widget > a {
+
+  .group{
+    display: inline;
+    margin-right: 12px;
+    color: #bdc3c7;
   }
+
+  .group-tag{
+    float: right;
+    margin-right: 5px; /* same with the col-md-5 style*/
+    margin-bottom: 2px;
+  }
+
+  /* Category CSS*/
+
+  a:hover{
+    color:#1abc9c;
+    text-decoration:none;
+  }
+
+  a:visited{
+    text-decoration: none;
+  }
+
+  a:active {
+    color: #FFFFFF;
+    background-color: #1abc9c;
+    }
+  a::after{
+    color:#1abc9c;
+  }
+
+  .category-tags-style{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .ul-tags-style{
+    list-style-type: none;
+    padding: 0px;
+  }
+  .li-tags-style{
+    color: #34495e;
+    margin-top: 5px;
+  }
+  .tag-numbers-style{
+    font-style: normal;
+    font-weight: bolder;
+    color: #95a5a6;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-position: right;
+    float: right;
+  }
+.tag-font-style{
+  color: #95a5a6;
+}
+
+
 </style>
 
 </head>
@@ -159,11 +229,13 @@
                 <h1 class="page-header">Blog Home One
                     <small>Subheading</small>
                 </h1>
+                <!--
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a>
                     </li>
                     <li class="active">Blog Home One</li>
                 </ol>
+              -->
             </div>
         </div>
         <!-- /.row -->
@@ -171,47 +243,98 @@
         <div class="row">
 
             <!-- Blog Entries Column -->
-            <div class="col-md-12">
+            <div class="col-md-10">
                 <div class="col-md-5">
-                  <h4><a href="#">撰写【志望動機】的注意事项</a></h4>
-                  <p><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</p>
+                  <p class=""><a href="#" class="markdown btn btn-xs btn-success"><i class="fa fa-html5 "></i></a></p> <!-- remark the passage -->
+
+                  <h4><a href="#">撰写【志望動機】的注意事项</a>
+                  <h6>
+                    <i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00
+                  </h6>
                   <p>
                     在志望動機中，大部分学生都有自己固定的アピール用语。因为在企业自己的网页中常有看似可以在面试中加以引用的短语，很多学生就有了“こういうこと言えば良いんだ”这样的误解。这次我们就以NG志望動機的常见错误为例，来讲一讲其中的注意事项。
                   </p>
-                  </div>
+                      <ul class="icon-tools">
+                        <li class="group"><i class="fa fa-eye"></i>1000+</li>
+                        <li class="group"><i class="fa fa-comments"></i>66</li>
+                        <li class="group"><i class="fa fa-heart"></i>22</li>
+                      </ul><!-- end of icon-->
+              </div>
 
               <div class="col-md-5">
+
+                <p><a class="markdown btn btn-xs btn-danger" href="#"><i class="fa fa-bookmark"></i></a></p> <!-- remark the passage -->
+
                 <h4><a href="#">【ES策划】ES通关的NB方法</a></h4>
-                <p>
-                  <i class="fa fa-clock-o"></i> 2015.05.01 P.M.18:00 &nbsp; &nbsp; <i class="fa fa-eye"> 1000+ &nbsp; &nbsp; <i class="fa fa-comments"><a href=#> 66</a> </i>  &nbsp; &nbsp; </i> &nbsp; &nbsp; <i class="fa fa-heart"> 20</i>
-                </p><!-- description -->
+                <h6>
+                  <i class="fa fa-clock-o"></i> 2015.05.01 P.M.18:00
+                </h6><!-- description -->
                 <p>所有公司的招聘过程都是从提交ES开始，通过这一关，我们才能得到机会向公司展现自己的实力。今天，我们就来谈一谈ES通关的方法，虽然不是绝对，但希望能帮助大家更快的进入到就职过程的下一个阶段。</p>
-                  <a class="btn btn-danger btn-lg" href=#>继续阅读</a>
-                <div class="col-md-4 blog-widget">
-
-                </div>
-
+                <ul class="icon-tools">
+                  <li class="group"><i class="fa fa-eye"></i>1000+</li>
+                  <li class="group"><i class="fa fa-comments"></i>66</li>
+                  <li class="group"><i class="fa fa-heart"></i>22</li>
+                </ul><!-- end of icon-->
               </div>
 
 
                 <div class="col-md-5">
+
+                  <p><a class="markdown btn btn-xs btn-danger" href="#"><i class="fa fa-bookmark"></i></a></p> <!-- remark the passage -->
+
                   <h4><a href="#">如何在说明会上脱颖而出</a></h4>
-                  <p><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</p>
+                  <h6><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</h6>
                   <p>所以这期的专栏主要是给大家讲讲如何在说明会上脱颖而出，并且可以在人事面前给予自己加分。</p>
+                  <ul class="icon-tools">
+                    <li class="group"><i class="fa fa-eye"></i>1000+</li>
+                    <li class="group"><i class="fa fa-comments"></i>66</li>
+                    <li class="group"><i class="fa fa-heart"></i>22</li>
+                  </ul><!-- end of icon-->
                 </div>
 
               <div class="col-md-5">
+
+                <p><a class="markdown btn btn-xs btn-danger" href="#"><i class="fa fa-bookmark"></i></a></p> <!-- remark the passage -->
+
                 <h4><a href="#">日本的电力现状</a></h4>
-                <p><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</p>
+                <h6><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</h6>
                 <p>
                   今天的日经头条讲的是日本将在福井县开展核电站的废炉的整理工作。这必然是一件非常漫长和严谨的工作，因为其处理的对象是核电站。即使这些核电站已经停止工作，迈入废弃的行列当中，但如何处理这些留在炉里的高危险物质其实是需要非常谨慎的。
                 </p>
+
+                <ul class="icon-tools">
+                  <li class="group"><i class="fa fa-eye"></i>1000+</li>
+                  <li class="group"><i class="fa fa-comments"></i>66</li>
+                  <li class="group"><i class="fa fa-heart"></i>22</li>
+                </ul><!-- end of icon-->
+
               </div>
+            </div>
+            <div class="col-md-2 category-tags-style">
+              <h4>分类浏览</h4>
+              <ul class="ul-tags-style"> <!-- <em class="tag-numbers-style" > </em>-->
+                <li class="li-tags-style">
+                <a class="tag-font-style" href="#">就职经历
+                  <em class="tag-numbers-style">20</em>
+                </a>
+                </li>
+                <li class="li-tags-style"><a class="tag-font-style" href="#">合同説明会</a> <em class="tag-numbers-style" >15</em></li>
+                <li class="li-tags-style"><a class="tag-font-style" href="#">自己分析</a> <em class="tag-numbers-style" >23</em></li>
+                <li class="li-tags-style"><a class="tag-font-style" href="#">業界研究</a> <em class="tag-numbers-style" >35</em></li>
+                <li class="li-tags-style"><a class="tag-font-style" href="#">企業研究</a> <em class="tag-numbers-style" >38</em></li>
+                <li class="li-tags-style"><a class="tag-font-style" href="#">ES</a> <em class="tag-numbers-style" >200</em></li>
+                <li class="li-tags-style"><a class="tag-font-style" href="#">Webest</a> <em class="tag-numbers-style" >100</em></li>
+                <li class="li-tags-style"><a class="tag-font-style" href="#">GD</a> <em class="tag-numbers-style" >39</em></li>
+                <li class="li-tags-style"><a class="tag-font-style" href="#">集団面接</a> <em class="tag-numbers-style" >42</em></li>
+                <li class="li-tags-style"><a class="tag-font-style" href="#">面接対策</a> <em class="tag-numbers-style" >871</em></li>
+                <li class="li-tags-style"><a class="tag-font-style" href="#">外資</a> <em class="tag-numbers-style" >15</em></li>
+                <li class="li-tags-style"><a class="tag-font-style" href="#">インタンーシプ</a> <em class="tag-numbers-style" >200</em></li>
+              </ul>
             </div>
           </div>
 
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-3">
     <!-- Blog Search Well -->
     <div class="well">
         <h4>Blog Search</h4>
