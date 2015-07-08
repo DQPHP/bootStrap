@@ -45,13 +45,13 @@ body{
 
 .col-md-3-style{
       background-color:white;
-      padding: 5px;
+      padding: 10px;
       margin: 5px;
-      margin-bottom: 10px;
       box-shadow: 1px 1px 1px #bdc3c7; /*阴影*/
       border-radius: 10px; /*弧度*/
       height:300px;
       width: auto;
+      position: relative;
       }
 .caption-Name > h3{
   /* 名个人的英文名字 */
@@ -84,6 +84,20 @@ body{
   /* fa-awsome icon 颜色*/
   color: #34495e;
 }
+
+.expand-style{
+  position: absolute;
+  color:#7f8c8d;
+  left: 90%;
+  z-index: 20;
+  /*手机端显示有问题*/
+}
+
+.img-style{
+  position: relative;
+  z-index: 10;
+}
+
 </style>
 
 </head>
@@ -194,10 +208,10 @@ body{
         </div>
         <!-- /.row -->
 
-        <!-- Intro Content -->
+        <!-- Intro Content img/team-all.jpg  -->
         <div class="row">
             <div class="col-md-6">
-                <img class="img-responsive" src="img/team-all.jpg" alt="">
+                <img class="img-responsive" src="" alt="">
             </div>
             <div class="col-md-6">
                 <h2>About US</h2>
@@ -209,10 +223,10 @@ body{
         <!-- Team Members -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Our Team</h2>
+                <h2 class="page-header">Operation Team</h2>
             </div>
 
-            <div class="col-md-3 text-center">
+            <div class="col-md-3 col-md-offset-2 text-center">
                 <div class="col-md-3-style">
                     <img class="img-responsive center-block" src="img/davidBear.png">
                     <div class="caption-Name">
@@ -271,6 +285,14 @@ body{
                     </div>
                 </div>
             </div>
+         </div><!--end of row -->
+
+<hr>
+
+         <div class="row">
+             <div class="col-lg-12">
+                 <h2 class="page-header">IT Team</h2>
+             </div>
 
             <div class="col-md-3 text-center">
                 <div class="col-md-3-style">
@@ -351,11 +373,120 @@ body{
                     </div>
                 </div>
             </div>
-
-        </div>
-        <!-- /.row -->
+        </div> <!-- end ofrow -->
 
         <hr>
+
+
+                 <div class="row">
+                     <div class="col-lg-12">
+                         <h2 class="page-header">Teachers Team</h2>
+                     </div>
+
+                    <div class="col-md-3 text-center">
+                        <div class="col-md-3-style">
+                            <span class="expand-style"><i class="fa fa-expand" data-toggle="modal" data-target="#teacherIntro"></i></span>
+                            <img class="img-responsive center-block img-style" src="img/cheung.png">
+                            <div class="caption-Name">
+                                <h3>Rob<br>
+                                    <small>Consultant</small>
+                                </h3>
+                                <blockquote class="quote-style">金融・証券・保険業界</blockquote>
+                                <ul class="list-inline-style">
+                                    <li><a href="#"><i class="fa fa-2x fa-facebook-square fa-fw"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-2x fa-weixin fa-fw"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-2x fa-weibo fa-fw"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal for the first person -->
+                    <div class="modal fade" id="teacherIntro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">关于Rob</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>
+                              Rob修士就读于庆应义塾大学大学院。在大学院期间，曾经经过学校推荐，参加荷兰代尔夫特工科大学的交换留学。也是因为这次交换留学，没有时间参加所谓的暑期实习，甚至自己人生第一场就职说明会也只能安排在12月底。但正是因为这种看起来起步晚，无正规实习经验的危机感，使自己更加努力，在3月26日拿到了第一家大手石油公司内定，并在4月初拿到了大手证券N社内定。Rob虽然担当金融部分的讲师，但对能源、化学、商社、海运、物流、咨询等业界也有深刻理解。更重要的是，Rob通过自己经验总结出来的3个月速度就活方法，能够帮助你迅速的找到就活的自我，就职的自我，以及未来的自我。
+                            </p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- end of modal -->
+
+                    <div class="col-md-3 text-center">
+                        <div class="col-md-3-style">
+
+                            <img class="img-responsive center-block" src="img/dongqiang.png">
+                            <div class="caption-Name">
+                                <h3>Qiang<br>
+                                    <small>Web Developer</small>
+                                </h3>
+                                <blockquote class="quote-style">享受生活，我怕老婆!</blockquote>
+                                <ul class="list-inline-style">
+                                    <li><a href="#"><i class="fa fa-2x fa-facebook-square fa-fw"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-2x fa-weixin fa-fw"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-2x fa-weibo fa-fw"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <div class="col-md-3-style">
+                            <img class="img-responsive center-block" src="img/Tianhui.png">
+                            <div class="caption-Name">
+                                <h3>Tianhui<br>
+                                    <small>iOS Developer</small>
+                                </h3>
+                                <blockquote class="quote-style">最近比较烦，转职有点难</blockquote>
+                                <ul class="list-inline-style">
+                                    <li><a href="#"><i class="fa fa-2x fa-facebook-square fa-fw"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-2x fa-weixin fa-fw"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-2x fa-weibo fa-fw"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <div class="col-md-3-style">
+                            <img class="img-responsive center-block" src="img/nily.png">
+                            <div class="caption-Name">
+                                <h3>Nily<br>
+                                    <small>Web Designer</small>
+                                </h3>
+                                <blockquote class="quote-style">我要用魔法消灭你!</blockquote>
+                                <ul class="list-inline-style">
+                                    <li><a href="#"><i class="fa fa-2x fa-facebook-square fa-fw"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-2x fa-weixin fa-fw"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-2x fa-weibo fa-fw"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end ofrow -->
+
+
 
         <!-- Footer -->
         <footer>
