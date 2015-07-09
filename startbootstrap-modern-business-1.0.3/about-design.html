@@ -64,6 +64,9 @@ body{
 .quote-style{
   /* 引用字体的大小 */
   font-size: 15px;
+  border-left-color: #4aa3df;
+  background-color:#ecf0f1;
+  opacity: 0.6;
 }
 
 .list-inline-style {
@@ -226,7 +229,7 @@ body{
                 <h2 class="page-header">Operation Team</h2>
             </div>
 
-            <div class="col-md-3 col-md-offset-2 text-center">
+            <div class="col-md-3 text-center">
                 <div class="col-md-3-style">
                     <img class="img-responsive center-block" src="img/davidBear.png">
                     <div class="caption-Name">
@@ -408,38 +411,54 @@ body{
                     <div class="modal fade" id="teacherIntro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content" style="border-radius:0px; "> <!-- make the modal view rectangle-->
-                          <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-compress"></i></span></button>
-                            <h4 class="modal-title" id="myModalLabel" style="font-weight:bolder; color:#95a5a6">Teacher Details</h4>
-                            <!-- title
-                            <h4 class="modal-title" id="myModalLabel">Rob</h4>
-                            -->
+                          <div class="modal-header" style="background:#f1f4f9;">
 
-                          </div>
+                            <h2 class="modal-title" id="myModalLabel" style="font-family: Impact; opacity:0.6">About Teacher</h2>
+
+                          </div><!-- end of header -->
+
                           <div class="modal-body">
-                            <div class="row">
-                              <!--左边图片框 -->
-                              <div class="col-md-4">
-                                  <img class="img-responsive thumbnail" src="http://placehold.it/450x600" alt=""><!-- keep in ratio of 4:3 -->
-                              </div>
-                              <div class="col-md-8">
-                                <h1 style="color:#34495e; margin-top:-5px;">Rob</h1>
-                                <div class="btn-group btn-group-sm" role="group" style="margin-bottom:10px">
-                                  <span class="label" style="background:#2ecc71">金融</span>
-                                  <span class="label" style="background:#2ecc71">証券</span>
-                                  <span class="label" style="background:#2ecc71">保険</span>
+                            <div class="container-fluid">
+                              <div class="row">
+                                <!--左边图片框 -->
+                                <div class="col-md-4">
+                                    <img class="img-responsive thumbnail" src="http://placehold.it/450x600" alt=""><!-- keep in ratio of 4:3 -->
                                 </div>
-                              <p style="color:#95a5a6; ">
-                                Rob修士就读于庆应义塾大学大学院。在大学院期间，曾经经过学校推荐，参加荷兰代尔夫特工科大学的交换留学。在3月26日拿到了第一家大手石油公司内定，并在4月初拿到了大手证券N社内定。Rob虽然担当金融部分的讲师，但对能源、化学、商社、海运、物流、咨询等业界也有深刻理解。更重要的是，Rob通过自己经验总结出来的3个月速度就活方法，能够帮助你迅速的找到就活的自我，就职的自我，以及未来的自我。
-                              </p>
+                                <div class="col-md-8">
+                                  <h2 style="font-weight:bolder ; margin-top:-5px; opacity:0.8">Rob</h2>
+                                  <div class="btn-group btn-group-sm" role="group" style="margin-bottom:10px">
+                                    <span class="label" style="background:#2ecc71">金融</span>
+                                    <span class="label" style="background:#2ecc71">証券</span>
+                                    <span class="label" style="background:#2ecc71">保険</span>
+                                  </div>
+                                <p style="line-height: 150%; opacity:0.6">
+                                  Rob修士就读于庆应义塾大学大学院。在大学院期间，曾经经过学校推荐，参加荷兰代尔夫特工科大学的交换留学。在3月26日拿到了第一家大手石油公司内定，并在4月初拿到了大手证券N社内定。Rob虽然担当金融部分的讲师，但对能源、化学、商社、海运、物流、咨询等业界也有深刻理解。更重要的是，Rob通过自己经验总结出来的3个月速度就活方法，能够帮助你迅速的找到就活的自我，就职的自我，以及未来的自我。
+                                </p>
+                              </div><!-- end of detail introduction-->
+                            </div><!-- end of row-->
+                          </div><!-- end of fluid -->
+                        </div><!-- end of modal-body-->
 
-
-                              </div>
-                            </div>
-                          </div>
+                          <style>
+                          .modal-footer-btn-style-left{
+                            border-radius: 25px;
+                            background-color: #3498db;
+                            color: white;
+                            opacity: 0.6;
+                            float:left;
+                            }
+                            .modal-footer-btn-style-right{
+                              border-radius: 25px;
+                              background-color: #e74c3c;
+                              color: white;
+                              opacity: 0.8;
+                            }
+                          </style>
                           <div class="modal-footer">
-                            <a href="#" class="btn btn-block btn-primary">Contact him</a>
+                            <a href="#" class="btn modal-footer-btn-style-left" data-dismiss="modal">Back to top</a>
+                            <a href="#" class="btn modal-footer-btn-style-right">Send message</a>
                           </div>
+
                         </div>
                       </div>
                     </div><!-- end of modal -->
