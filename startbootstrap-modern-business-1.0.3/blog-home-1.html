@@ -19,7 +19,7 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+    <script src="js/bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -119,6 +119,21 @@
 
     <!-- Page Content -->
     <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+        <div id="getting-started"></div>
+        <script type="text/javascript">
+          $("#getting-started")
+          .countdown("2016/01/01", function(event) {
+            $(this).text(
+              event.strftime('%D days %H:%M:%S')
+              );
+            });
+        </script>
+      </div>
+      </div>
+
 
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
@@ -267,6 +282,14 @@
         <!-- /.row -->
 
         <hr>
+
+
+        <div id="getting-started">david</div>
+        <script type="text/javascript">
+                $("#getting-started").countdown("2016/01/01", function(event) {
+                  $(this).text(event.strftime('%D days %H:%M:%S'));});
+        </script>
+
 
         <!-- Footer -->
         <footer>
