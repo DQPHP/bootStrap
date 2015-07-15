@@ -28,10 +28,13 @@
     <![endif]-->
 <style>
 
+
 body{
       background-color:  #f1f4f9;
-      padding-left:
     }
+
+
+
  .fa-eye, .fa-comments, .fa-heart, .fa-expand {
    color: #bdc3c7;
    padding-right: 2px; /* distance between icon and text*/
@@ -59,7 +62,6 @@ body{
  }
 
   .col-md-4{
-    background-color: #f1f4f9;
   }
 
   .col-md-8{
@@ -69,23 +71,6 @@ body{
     border-top: 1px solid #34495e;
   }
 
-  .col-md-11{
-    /*消息*/
-    margin-top: 20px;
-    padding: 20px;
-    padding-top: 10px;
-    padding-right: 5px;
-    border-bottom: 1px solid #ecf0f1;
-/*
-margin-bottom: 10px;
-margin-left: 5px;
-margin-right: 5px;
-border-left-style: outset;
-border-left-color: #1ABC9C;
-box-shadow: 1px 1px 2px grey;
-*/
-    }
-
   .col-md-11 > h6{
     color: #bdc3c7; /* 文章中显示发布时间的color */
   }
@@ -94,7 +79,6 @@ box-shadow: 1px 1px 2px grey;
     /*文章的描述文字*/
     color:#7f8c8d;
   }
-
 
   /* Definition of Image */
   .img-thumbView{
@@ -122,8 +106,26 @@ box-shadow: 1px 1px 2px grey;
     margin-bottom: 2px;
   }
 
-  /* Category CSS*/
 
+  .col-md-11{
+    /*消息*/
+    margin: 10px;
+    padding:20px;
+    border-bottom: 1px solid #ecf0f1;
+    }
+
+  .event-cover-style{
+    /*figure will cross the whole column, which means ignore the padding*/
+    position: relative;
+    width: auto;
+    /*
+    margin-top: -30px;
+    margin-bottom:-20px;
+    margin-left: -40px;
+    */
+  }
+
+  /* Category CSS*/
   a:hover{
     color:#1abc9c;
     text-decoration:none;
@@ -326,6 +328,14 @@ box-shadow: 1px 1px 2px grey;
                         所以这期的专栏主要是给大家讲讲如何在说明会上脱颖而出，并且可以在人事面前给予自己加分。
                       </p>
                     </div><!--end of the first passage-->
+
+
+                    <div class="col-md-11">
+                      <a href="blog-post.html">
+                          <img class="img-responsive img-hover event-cover-style" src="http://placehold.it/600X250" alt="">
+                      </a><!-- end of imageView -->
+                    </div><!--end of the first passage-->
+
 
                     <div class="col-md-11">
                       <h4><a href="#">如何在说明会上脱颖而出</a>
