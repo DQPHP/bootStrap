@@ -19,6 +19,13 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Count-down CSS -->
+    <link href="countDown/flipclock.css" rel="stylesheet">
+
+    <!-- Count-down JavaScript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="countDown/flipclock.js"></script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,24 +40,19 @@ body{
       background-color:  #f1f4f9;
     }
 
-
-
  .fa-eye, .fa-comments, .fa-heart, .fa-expand {
    color: #bdc3c7;
    padding-right: 2px; /* distance between icon and text*/
  }
-
  .page-header-layout-style{
    /* header部分的排版*/
    color: #34495e;
  }
-
  h1 .page-header{
    /*主标题*/
    font-size: 50px;
    font-weight: bold;
  }
-
  h4 a{
        color: #444444;
        font-weight: bold;
@@ -61,14 +63,12 @@ body{
    font-size: 16px;
  }
 
-  .col-md-4{
-  }
-
   .col-md-8{
     /*文章主题部分，占全部比例的8/12*/
     background-color: white;
     border-right: 1px solid #ecf0f1;
     border-top: 1px solid #34495e;
+    padding: 0px;
   }
 
   .col-md-11 > h6{
@@ -78,6 +78,7 @@ body{
   .description-style{
     /*文章的描述文字*/
     color:#7f8c8d;
+    line-height: 200%;
   }
 
   /* Definition of Image */
@@ -108,16 +109,20 @@ body{
 
 
   .col-md-11{
-    /*消息*/
-    margin: 10px;
+    /*消息
+    margin: 10px;*/
     padding:20px;
+    padding-top: 5px;
     border-bottom: 1px solid #ecf0f1;
+
     }
 
   .event-cover-style{
     /*figure will cross the whole column, which means ignore the padding*/
-    position: relative;
-    width: auto;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
     /*
     margin-top: -30px;
     margin-bottom:-20px;
@@ -272,7 +277,7 @@ body{
             <!-- Blog Entries Column -->
             <div class="col-md-8">
                   <div class="col-md-11">
-                  <h4><a href="#">撰写【志望動機】的注意事项</a>
+                  <h4><a href="#">撰写【志望動機】的注意事项</a></h4>
                   <a href="blog-post.html">
                       <img class="img-responsive img-hover img-thumbView" src="http://placehold.it/105X105" alt="">
                   </a><!-- end of imageView -->
@@ -292,7 +297,7 @@ body{
 
 
                     <div class="col-md-11">
-                      <h4><a href="#">【ES策划】ES通关的NB方法</a>
+                      <h4><a href="#">【ES策划】ES通关的NB方法</a></h4>
                       <a href="blog-post.html">
                           <img class="img-responsive img-hover img-thumbView" src="http://placehold.it/105X105" alt="">
                       </a><!-- end of imageView -->
@@ -307,12 +312,30 @@ body{
                       <p class="description-style">
                         所有公司的招聘过程都是从提交ES开始，通过这一关，我们才能得到机会向公司展现自己的实力。今天，我们就来谈一谈ES通关的方法，虽然不是绝对，但希望能帮助大家更快的进入到就职过程的下一个阶段.
                         所有公司的招聘过程都是从提交ES开始，通过这一关，我们才能得到机会向公司展现自己的实力。今天，我们就来谈一谈ES通关的方法，虽然不是绝对，但希望能帮助大家更快的进入到就职过程的下一个阶段.
-
                       </p>
                     </div><!--end of the first passage-->
 
                     <div class="col-md-11">
-                      <h4><a href="#">如何在说明会上脱颖而出</a>
+                      <h4><a href="#">就职课程</a></h4>
+                      <h6>
+                        <ul class="icon-tools">
+                          <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
+                          <li class="group"><i class="fa fa-eye"></i>1000+</li>
+                          <li class="group"><i class="fa fa-comments"></i>66</li>
+                          <li class="group"><i class="fa fa-heart"></i>22</li>
+                        </ul><!-- end of icon-->
+                      </h6>
+                      <p class="description-style">
+                        所有公司的招聘过程都是从提交ES开始，通过这一关，我们才能得到机会向公司展现自己的实力。今天，我们就来谈一谈ES通关的方法，虽然不是绝对，但希望能帮助大家更快的进入到就职过程的下一个阶段.
+                        所有公司的招聘过程都是从提交ES开始，通过这一关，我们才能得到机会向公司展现自己的实力。今天，我们就来谈一谈ES通关的方法，虽然不是绝对，但希望能帮助大家更快的进入到就职过程的下一个阶段.
+                      </p>                      
+                      <div class="col-md-11 countDown" style="margin:2em;"></div><!-- countdown -->
+
+                    </div><!--用于课程-->
+
+
+                    <div class="col-md-11">
+                      <h4><a href="#">如何在说明会上脱颖而出</a></h4>
                       <a href="blog-post.html">
                           <img class="img-responsive img-hover img-thumbView" src="http://placehold.it/105X105" alt="">
                       </a><!-- end of imageView -->
@@ -329,19 +352,15 @@ body{
                       </p>
                     </div><!--end of the first passage-->
 
+                      <div>
+                        <a href="blog-post.html">
+                        <img class="img-responsive img-hover event-cover-style" src="http://placehold.it/600X250" alt="">
+                      </a><!-- 用于活动 -->
+                      </div>
 
                     <div class="col-md-11">
-                      <a href="blog-post.html">
-                          <img class="img-responsive img-hover event-cover-style" src="http://placehold.it/600X250" alt="">
-                      </a><!-- end of imageView -->
-                    </div><!--end of the first passage-->
-
-
-                    <div class="col-md-11">
-                      <h4><a href="#">如何在说明会上脱颖而出</a>
-                      <a href="blog-post.html">
+                      <h4><a href="#">如何在说明会上脱颖而出</a></h4>
                           <img class="img-responsive img-hover img-thumbView" src="http://placehold.it/105X105" alt="">
-                      </a><!-- end of imageView -->
                       <h6>
                         <ul class="icon-tools">
                           <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
@@ -354,7 +373,29 @@ body{
                         今天的日经头条讲的是日本将在福井县开展核电站的废炉的整理工作。这必然是一件非常漫长和严谨的工作，因为其处理的对象是核电站。即使这些核电站已经停`2`止工作，迈入废弃的行列当中，但如何处理这些留在炉里的高危险物质其实是需要非常谨慎的。
                       </p>
                     </div><!--end of the first passage-->
+
+                    <div class="col-md-11">
+                      <h4><a href="#">【ES策划】ES通关的NB方法</a></h4>
+                      <a href="blog-post.html">
+                          <img class="img-responsive img-hover img-thumbView" src="http://placehold.it/105X105" alt="">
+                      </a><!-- end of imageView -->
+                      <h6>
+                        <ul class="icon-tools">
+                          <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
+                          <li class="group"><i class="fa fa-eye"></i>1000+</li>
+                          <li class="group"><i class="fa fa-comments"></i>66</li>
+                          <li class="group"><i class="fa fa-heart"></i>22</li>
+                        </ul><!-- end of icon-->
+                      </h6>
+                      <p class="description-style">
+                        所有公司的招聘过程都是从提交ES开始，通过这一关，我们才能得到机会向公司展现自己的实力。今天，我们就来谈一谈ES通关的方法，虽然不是绝对，但希望能帮助大家更快的进入到就职过程的下一个阶段.
+                        所有公司的招聘过程都是从提交ES开始，通过这一关，我们才能得到机会向公司展现自己的实力。今天，我们就来谈一谈ES通关的方法，虽然不是绝对，但希望能帮助大家更快的进入到就职过程的下一个阶段.
+
+                      </p>
+                    </div><!--end of the first passage-->
+
               </div><!-- col-md-8 -->
+
 
 
             <!-- widget!!! -->
@@ -414,11 +455,38 @@ body{
     </div>
     <!-- /.container -->
 
+    <script>
+      var countDown;
+      var nU = Math.floor( new Date().getTime() / 1000 ); // now-second
+      var sU = Math.floor( new Date("2015/07/18 18:00:00").getTime() / 1000 ); //after-second
+      $(document).ready(function() {
+        var clock;
+        var timeInMs = Date.now();
+        countDown = $('.countDown').FlipClock({
+              clockFace: 'DailyCounter',
+              autoStart: false,
+              callbacks: {
+                stop: function() {
+                  $('.message').html('The clock has stopped!')
+                }
+              }
+          });
+          countDown.setTime(sU-nU);
+          countDown.setCountdown(true);
+          countDown.start();
+
+      });
+    </script>
+
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Count-down JavaScript -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="countDown/flipclock.js"></script>
+
 
 </body>
 
