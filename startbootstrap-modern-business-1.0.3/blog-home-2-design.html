@@ -114,7 +114,6 @@ body{
     padding:20px;
     padding-top: 5px;
     border-bottom: 1px solid #ecf0f1;
-
     }
 
   .event-cover-style{
@@ -149,18 +148,25 @@ body{
   }
 
   .category-tags-style{
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+    margin: 10px;
+    padding:10px;
+    border-top: 1px solid grey;
+
+
+    }
   .ul-tags-style{
+    /*用来设定list*/
     list-style-type: none;
     padding: 0px;
   }
-  .li-tags-style{
+.ul-tags-style > .li-tags-style{
+    /*用来设定tag*/
     color: #34495e;
     margin-top: 5px;
+    line-height: 200%;
   }
-  .tag-numbers-style{
+    .tag-numbers-style{
+    /*用来显示tag中的数字*/
     font-style: normal;
     font-weight: bolder;
     color: #95a5a6;
@@ -170,12 +176,24 @@ body{
     float: right;
   }
 .tag-font-style{
+  /*分类浏览中的li部分的颜色*/
   color: #95a5a6;
 }
-.sidebar-top5{
-  /* 自动显示出阅读量 or 点赞书最多的文章，显示在又侧*/
-  padding-top: 20px;
+.ul-tags-topPick-style{
+  /*reduce the top-pick stories symbol*/
+  display: block;
+  float: none;
+  width: auto;
+  padding-bottom: 18px;
 }
+
+.widget-col-md-4{
+  /*为了让图片可以在右侧占据整个部分，这里设定margin，padding为0*/
+  /*带来的结果就是所有的其他的元素，都需要相对应的设定margin和padding*/
+  margin: 0px;
+  padding: 0px;
+}
+
 
 </style>
 
@@ -328,7 +346,7 @@ body{
                       <p class="description-style">
                         所有公司的招聘过程都是从提交ES开始，通过这一关，我们才能得到机会向公司展现自己的实力。今天，我们就来谈一谈ES通关的方法，虽然不是绝对，但希望能帮助大家更快的进入到就职过程的下一个阶段.
                         所有公司的招聘过程都是从提交ES开始，通过这一关，我们才能得到机会向公司展现自己的实力。今天，我们就来谈一谈ES通关的方法，虽然不是绝对，但希望能帮助大家更快的进入到就职过程的下一个阶段.
-                      </p>                      
+                      </p>
                       <div class="col-md-11 countDown" style="margin:2em;"></div><!-- countdown -->
 
                     </div><!--用于课程-->
@@ -397,21 +415,8 @@ body{
               </div><!-- col-md-8 -->
 
 
-
-            <!-- widget!!! -->
-            <div class="col-md-4">
-              <div class="row">
-                <div class="col-md-12">
-                  <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                  </ul>
-                </div>
-
-                <div class="col-md-12 category-tags-style">
+                <div class="col-md-4 widget-col-md-4">
+                  <div class="col-md-12 category-tags-style" >
                   <h4>分类浏览</h4>
                   <ul class="ul-tags-style"> <!-- <em class="tag-numbers-style" > </em>-->
                     <li class="li-tags-style">
@@ -421,7 +426,7 @@ body{
                     </li>
                     <li class="li-tags-style"><a class="tag-font-style" href="#">合同説明会</a> <em class="tag-numbers-style" >15</em></li>
                     <li class="li-tags-style"><a class="tag-font-style" href="#">自己分析</a> <em class="tag-numbers-style" >23</em></li>
-                    <li class="li-tags-style"><a class="tag-font-style" href="#">業界研究</a> <em class="tag-numbers-style" >35</em></li>
+                    <li class="li-tags-style"><a class="tag-font-style"1href="#">業界研究</a> <em class="tag-numbers-style" >35</em></li>
                     <li class="li-tags-style"><a class="tag-font-style" href="#">企業研究</a> <em class="tag-numbers-style" >38</em></li>
                     <li class="li-tags-style"><a class="tag-font-style" href="#">ES</a> <em class="tag-numbers-style" >200</em></li>
                     <li class="li-tags-style"><a class="tag-font-style" href="#">Webest</a> <em class="tag-numbers-style" >100</em></li>
@@ -432,8 +437,28 @@ body{
                     <li class="li-tags-style"><a class="tag-font-style" href="#">インタンーシプ</a> <em class="tag-numbers-style" >200</em></li>
                   </ul>
                 </div>
+                <div><!-- use to introduce some good categories: 肉包专栏-->
+                  <a href="blog-post.html">
+                    <img class="img-responsive img-hover event-cover-style" src="http://placehold.it/200X100" alt="">
+                  </a><!-- 用于活动 -->
+                </div>
+                <div class="col-md-12 category-tags-style"><!-- Top Pick news -->
+                  <h4>Top Picks</h4>
+                  <ul class="ul-tags-topPick-style">
+                    <li class="">
+                      <button class=""><span class="list-index">1</span></button><a href="#">ES通关方法</a>
+                      <div class="ul-tags-topPick-passages">
+                        <a href="#">ES通关方法</a>
+                      </div>
+                    </li>
+                    <li class="">肉包专栏56期</li>
+                    <li class="">就职课程</li>
+                    <li class="">如何在说明会上脱颖而出</li>
+                    <li class="">搏击三级课程</li>
+                  </ul>
+                </div>
               </div>
-          </div><!-- end of widght -->
+          </div><!-- end of row -->
 
 
 
@@ -458,7 +483,7 @@ body{
     <script>
       var countDown;
       var nU = Math.floor( new Date().getTime() / 1000 ); // now-second
-      var sU = Math.floor( new Date("2015/07/18 18:00:00").getTime() / 1000 ); //after-second
+      var sU = Math.floor( new Date("2015/10/18 18:00:00").getTime() / 1000 ); //after-second
       $(document).ready(function() {
         var clock;
         var timeInMs = Date.now();
