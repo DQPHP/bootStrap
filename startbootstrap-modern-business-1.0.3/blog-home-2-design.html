@@ -34,16 +34,26 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 <style>
-
-
-body{
+/*
+  - CSS design by davidBear
+  - Last modified: 2015.07.24
+  - Ver: 0.1
+  - Introduction: 主要从立体 -> 拟物的设计
+  - Update in the next ver:
+      1) 边栏部分的 Top Pick
+      2) 文章以timeLine的形式显示出来 => Use "Load more" instead of "pagination"
+*/
+  body{
+      /*背景颜色*/
       background-color:  #f1f4f9;
-    }
+  }
 
- .fa-eye, .fa-comments, .fa-heart, .fa-expand {
+ .fa-eye, .fa-expand {
+   /*阅读的fa-icon*/
    color: #bdc3c7;
    padding-right: 2px; /* distance between icon and text*/
  }
+
  .page-header-layout-style{
    /* header部分的排版*/
    color: #34495e;
@@ -57,12 +67,11 @@ body{
        color: #444444;
        font-weight: bold;
    }
-
  .page-header-small-style{
-   color: #A0A7AD; /*副标题*/
+   /*副标题*/
+   color: #A0A7AD;
    font-size: 16px;
  }
-
   .col-md-8{
     /*文章主题部分，占全部比例的8/12*/
     background-color: white;
@@ -72,7 +81,8 @@ body{
   }
 
   .col-md-11 > h6{
-    color: #bdc3c7; /* 文章中显示发布时间的color */
+    /* 文章中显示发布时间的color */
+    color: #bdc3c7;
   }
 
   .description-style{
@@ -96,18 +106,15 @@ body{
   }
 
   .group{
+    /*主页面的小图片*/
+    /*
+      1. 发布时间
+      2. 阅读数
+    */
     display: inline;
     margin-right: 12px;
     color: #bdc3c7;
   }
-
-  .group-tag{
-    float: right;
-    margin-right: 5px; /* same with the col-md-5 style*/
-    margin-bottom: 2px;
-  }
-
-
   .col-md-11{
     /*消息
     margin: 10px;*/
@@ -117,42 +124,35 @@ body{
     }
 
   .event-cover-style{
+    /*banner，用于七联的活动宣传，以及未来广告的插入栏*/
     /*figure will cross the whole column, which means ignore the padding*/
     box-sizing: border-box;
     height: 100%;
     width: 100%;
     z-index: 0;
-    /*
-    margin-top: -30px;
-    margin-bottom:-20px;
-    margin-left: -40px;
-    */
   }
 
-  /* Category CSS*/
+  /* Category CSS */
+  /*需要重新定义这个部分*/
   a:hover{
     color:#1abc9c;
     text-decoration:none;
   }
-
   a:visited{
     text-decoration: none;
   }
-
   a:active {
     color: #FFFFFF;
     background-color: #1abc9c;
-    }
+  }
   a::after{
     color:#1abc9c;
   }
 
   .category-tags-style{
+    /*侧边栏的layout*/
     margin: 10px;
     padding:10px;
-    border-top: 1px solid grey;
-
-
     }
   .ul-tags-style{
     /*用来设定list*/
@@ -179,22 +179,14 @@ body{
   /*分类浏览中的li部分的颜色*/
   color: #95a5a6;
 }
-.ul-tags-topPick-style{
-  /*reduce the top-pick stories symbol*/
-  display: block;
-  float: none;
-  width: auto;
-  padding-bottom: 18px;
-}
 
 .widget-col-md-4{
-  /*为了让图片可以在右侧占据整个部分，这里设定margin，padding为0*/
+  /*用来宣传我们的专栏文章*/
+  /*为了让图片可以在右侧占据整个部分，这里设定margin，padding为*/
   /*带来的结果就是所有的其他的元素，都需要相对应的设定margin和padding*/
   margin: 0px;
   padding: 0px;
 }
-
-
 </style>
 
 </head>
@@ -304,8 +296,6 @@ body{
                     <ul class="icon-tools">
                       <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
                       <li class="group"><i class="fa fa-eye"></i>1000+</li>
-                      <li class="group"><i class="fa fa-comments"></i>66</li>
-                      <li class="group"><i class="fa fa-heart"></i>22</li>
                     </ul><!-- end of icon-->
                   </h6>
                   <p class="description-style">
@@ -323,8 +313,6 @@ body{
                         <ul class="icon-tools">
                           <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
                           <li class="group"><i class="fa fa-eye"></i>1000+</li>
-                          <li class="group"><i class="fa fa-comments"></i>66</li>
-                          <li class="group"><i class="fa fa-heart"></i>22</li>
                         </ul><!-- end of icon-->
                       </h6>
                       <p class="description-style">
@@ -339,15 +327,14 @@ body{
                         <ul class="icon-tools">
                           <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
                           <li class="group"><i class="fa fa-eye"></i>1000+</li>
-                          <li class="group"><i class="fa fa-comments"></i>66</li>
-                          <li class="group"><i class="fa fa-heart"></i>22</li>
                         </ul><!-- end of icon-->
                       </h6>
                       <p class="description-style">
                         所有公司的招聘过程都是从提交ES开始，通过这一关，我们才能得到机会向公司展现自己的实力。今天，我们就来谈一谈ES通关的方法，虽然不是绝对，但希望能帮助大家更快的进入到就职过程的下一个阶段.
                         所有公司的招聘过程都是从提交ES开始，通过这一关，我们才能得到机会向公司展现自己的实力。今天，我们就来谈一谈ES通关的方法，虽然不是绝对，但希望能帮助大家更快的进入到就职过程的下一个阶段.
                       </p>
-                      <div class="col-md-11 countDown" style="margin:2em;"></div><!-- countdown -->
+                      <div class="col-md-11 countDown" style="margin:2em;">
+                      </div><!-- countdown -->
 
                     </div><!--用于课程-->
 
@@ -361,8 +348,6 @@ body{
                         <ul class="icon-tools">
                           <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
                           <li class="group"><i class="fa fa-eye"></i>1000+</li>
-                          <li class="group"><i class="fa fa-comments"></i>66</li>
-                          <li class="group"><i class="fa fa-heart"></i>22</li>
                         </ul><!-- end of icon-->
                       </h6>
                       <p class="description-style">
@@ -383,8 +368,6 @@ body{
                         <ul class="icon-tools">
                           <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
                           <li class="group"><i class="fa fa-eye"></i>1000+</li>
-                          <li class="group"><i class="fa fa-comments"></i>66</li>
-                          <li class="group"><i class="fa fa-heart"></i>22</li>
                         </ul><!-- end of icon-->
                       </h6>
                       <p class="description-style">
@@ -401,8 +384,6 @@ body{
                         <ul class="icon-tools">
                           <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
                           <li class="group"><i class="fa fa-eye"></i>1000+</li>
-                          <li class="group"><i class="fa fa-comments"></i>66</li>
-                          <li class="group"><i class="fa fa-heart"></i>22</li>
                         </ul><!-- end of icon-->
                       </h6>
                       <p class="description-style">
@@ -414,8 +395,7 @@ body{
 
               </div><!-- col-md-8 -->
 
-
-                <div class="col-md-4 widget-col-md-4">
+              <div class="col-md-4 widget-col-md-4">
                   <div class="col-md-12 category-tags-style" >
                   <h4>分类浏览</h4>
                   <ul class="ul-tags-style"> <!-- <em class="tag-numbers-style" > </em>-->
@@ -441,21 +421,6 @@ body{
                   <a href="blog-post.html">
                     <img class="img-responsive img-hover event-cover-style" src="http://placehold.it/200X100" alt="">
                   </a><!-- 用于活动 -->
-                </div>
-                <div class="col-md-12 category-tags-style"><!-- Top Pick news -->
-                  <h4>Top Picks</h4>
-                  <ul class="ul-tags-topPick-style">
-                    <li class="">
-                      <button class=""><span class="list-index">1</span></button><a href="#">ES通关方法</a>
-                      <div class="ul-tags-topPick-passages">
-                        <a href="#">ES通关方法</a>
-                      </div>
-                    </li>
-                    <li class="">肉包专栏56期</li>
-                    <li class="">就职课程</li>
-                    <li class="">如何在说明会上脱颖而出</li>
-                    <li class="">搏击三级课程</li>
-                  </ul>
                 </div>
               </div>
           </div><!-- end of row -->
