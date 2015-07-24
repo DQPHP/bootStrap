@@ -65,7 +65,7 @@
  }
  h4 a{
        color: #444444;
-       font-weight: bold;
+       font-weight: normal;
    }
  .page-header-small-style{
    /*副标题*/
@@ -81,6 +81,7 @@
   }
 
   .col-md-8 > .col-md-12{
+    /*图片占据整个空间，所以设定padding=0px*/
     padding: 0px;
   }
 
@@ -153,10 +154,13 @@
     color:#1abc9c;
   }
 
-  .category-tags-style{
+  .side-bar-tags{
     /*侧边栏的layout*/
     margin: 10px;
     padding:10px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #7f8c8d;
     }
   .ul-tags-style{
     /*用来设定list*/
@@ -300,6 +304,8 @@
                     <ul class="icon-tools">
                       <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
                       <li class="group"><i class="fa fa-eye"></i>1000+</li>
+                      <li class="group"><span class="label label-info" style="b"><i class="fa fa-tag"></i>ES对策</span>
+                      </li>
                     </ul><!-- end of icon-->
                   </h6>
                   <p class="description-style">
@@ -317,6 +323,7 @@
                         <ul class="icon-tools">
                           <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
                           <li class="group"><i class="fa fa-eye"></i>1000+</li>
+                          <li class="group"><span class="label label-info" style="b"><i class="fa fa-tag"></i>ES对策</span>
                         </ul><!-- end of icon-->
                       </h6>
                       <p class="description-style">
@@ -331,6 +338,7 @@
                         <ul class="icon-tools">
                           <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
                           <li class="group"><i class="fa fa-eye"></i>1000+</li>
+                          <li class="group"><span class="label label-danger"><i class="fa fa-tag"></i>七联就职讲座</span>
                         </ul><!-- end of icon-->
                       </h6>
                       <p class="description-style">
@@ -372,6 +380,7 @@
                         <ul class="icon-tools">
                           <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
                           <li class="group"><i class="fa fa-eye"></i>1000+</li>
+                          <li class="group"><span class="label label-info" style="b"><i class="fa fa-tag"></i>专栏</span>
                         </ul><!-- end of icon-->
                       </h6>
                       <p class="description-style">
@@ -398,35 +407,99 @@
                     </div><!--end of the first passage-->
 
               </div><!-- col-md-8 -->
-
               <div class="col-md-4 widget-col-md-4">
-                  <div class="col-md-12 category-tags-style" >
-                  <h4>分类浏览</h4>
-                  <ul class="ul-tags-style"> <!-- <em class="tag-numbers-style" > </em>-->
-                    <li class="li-tags-style">
-                    <a class="tag-font-style" href="#">就职经历
-                      <em class="tag-numbers-style">20</em>
-                    </a>
-                    </li>
-                    <li class="li-tags-style"><a class="tag-font-style" href="#">合同説明会</a> <em class="tag-numbers-style" >15</em></li>
-                    <li class="li-tags-style"><a class="tag-font-style" href="#">自己分析</a> <em class="tag-numbers-style" >23</em></li>
-                    <li class="li-tags-style"><a class="tag-font-style"1href="#">業界研究</a> <em class="tag-numbers-style" >35</em></li>
-                    <li class="li-tags-style"><a class="tag-font-style" href="#">企業研究</a> <em class="tag-numbers-style" >38</em></li>
-                    <li class="li-tags-style"><a class="tag-font-style" href="#">ES</a> <em class="tag-numbers-style" >200</em></li>
-                    <li class="li-tags-style"><a class="tag-font-style" href="#">Webest</a> <em class="tag-numbers-style" >100</em></li>
-                    <li class="li-tags-style"><a class="tag-font-style" href="#">GD</a> <em class="tag-numbers-style" >39</em></li>
-                    <li class="li-tags-style"><a class="tag-font-style" href="#">集団面接</a> <em class="tag-numbers-style" >42</em></li>
-                    <li class="li-tags-style"><a class="tag-font-style" href="#">面接対策</a> <em class="tag-numbers-style" >871</em></li>
-                    <li class="li-tags-style"><a class="tag-font-style" href="#">外資</a> <em class="tag-numbers-style" >15</em></li>
-                    <li class="li-tags-style"><a class="tag-font-style" href="#">インタンーシプ</a> <em class="tag-numbers-style" >200</em></li>
-                  </ul>
-                </div>
-                <div><!-- use to introduce some good categories: 肉包专栏-->
-                  <a href="blog-post.html">
-                    <img class="img-responsive img-hover event-cover-style" src="http://placehold.it/200X100" alt="">
-                  </a><!-- 用于活动 -->
-                </div>
-              </div>
+                  <div class="col-md-12 side-bar-tags">
+                    <h4 class="sidebar-section-title"><i class="fa fa-tags"></i> 分类浏览</h4>
+                    <ul class="ul-tags-style"> <!-- <em class="tag-numbers-style" > </em>-->
+                      <li class="li-tags-style">
+                      <a class="tag-font-style" href="#">就职经历
+                        <em class="tag-numbers-style">20</em>
+                      </a>
+                      </li>
+                      <li class="li-tags-style"><a class="tag-font-style" href="#">合同説明会</a> <em class="tag-numbers-style" >15</em></li>
+                      <li class="li-tags-style"><a class="tag-font-style" href="#">自己分析</a> <em class="tag-numbers-style" >23</em></li>
+                      <li class="li-tags-style"><a class="tag-font-style"1href="#">業界研究</a> <em class="tag-numbers-style" >35</em></li>
+                      <li class="li-tags-style"><a class="tag-font-style" href="#">企業研究</a> <em class="tag-numbers-style" >38</em></li>
+                      <li class="li-tags-style"><a class="tag-font-style" href="#">ES</a> <em class="tag-numbers-style" >200</em></li>
+                      <li class="li-tags-style"><a class="tag-font-style" href="#">Webest</a> <em class="tag-numbers-style" >100</em></li>
+                      <li class="li-tags-style"><a class="tag-font-style" href="#">GD</a> <em class="tag-numbers-style" >39</em></li>
+                      <li class="li-tags-style"><a class="tag-font-style" href="#">集団面接</a> <em class="tag-numbers-style" >42</em></li>
+                      <li class="li-tags-style"><a class="tag-font-style" href="#">面接対策</a> <em class="tag-numbers-style" >871</em></li>
+                      <li class="li-tags-style"><a class="tag-font-style" href="#">外資</a> <em class="tag-numbers-style" >15</em></li>
+                      <li class="li-tags-style"><a class="tag-font-style" href="#">インタンーシプ</a> <em class="tag-numbers-style" >200</em></li>
+                      </ul>
+                    </div>
+
+
+                    <style>
+
+                      .sidebar-section-title{
+                        /*定义所有sidebar的每一个section的title*/
+                        font-weight: bolder;
+                      }
+                      .sidebar-topPick-block{
+                        /*针对side-bar block的定义*/
+                        display: block;
+                        padding: 5px;
+                        border-bottom-style: solid;
+                        border-width: 1px;
+                        color:#7f8c8d;
+                        opacity: 0.7;
+                      }
+                      .fa-star{
+                        /*对小星星的定义*/
+                        color: #f1c40f;
+                      }
+
+                      .fa-tages,.fa-thumb-tack{
+                        margin-right: 5px;
+                      }
+
+                      .side-bar-topPick-description{
+                        /*描述性文字的定义*/
+                        line-height: 150%;
+                        color:#7f8c8d
+                      };
+                    </style>
+                    <div class="col-md-12 side-bar-tags"><!-- 5 Top Picks Articles -->
+                      <h4 class="sidebar-section-title"><i class="fa fa-thumb-tack"></i>人气推荐</h4>
+                      <div class="sidebar-topPick-block">
+                        <h4>
+                          <a href=#>
+                          <i class="fa fa-star"></i>【ES策划】ES通关的NB方法</a>
+                        </h4>
+                        <p class="side-bar-topPick-description">
+                          所有公司的招聘过程都是从提交ES开始，通过这一关，我们才能得到机会向公司展现自己的实力。今天，我们就来谈一谈ES通关的方法，虽然不是绝对，但希望能帮助大家更快的进入到就职过程的下一个阶段.
+                        </p>
+                      </div>
+                      <div class="sidebar-topPick-block">
+                        <h4>
+                          <a href=#>
+                          <i class="fa fa-star"></i>如何在说明会上脱颖而出<</a>
+                        </h4>
+                        <p class="side-bar-topPick-description">
+                          介绍的部分文字有限
+                        </p>
+                      </div>
+                      <div class="sidebar-topPick-block">
+                        <h4>
+                          <a href=#>
+                          <i class="fa fa-star"></i>【长文本】长文本</a>
+                        </h4>
+                        <p class="side-bar-topPick-description">
+                          长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
+                          长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
+                          长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
+                          长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
+                          长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
+                          长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
+                        </p>
+                      </div>
+                    </div><!-- end of top 3-->
+
+
+
+
           </div><!-- end of row -->
 
 
