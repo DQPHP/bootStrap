@@ -27,184 +27,213 @@
     <script src="countDown/flipclock.js"></script>
 
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-<style>
-/*
-  - CSS design by davidBear
-  - Last modified: 2015.07.24
-  - Ver: 0.1
-  - Introduction: 主要从立体 -> 拟物的设计
-  - Update in the next ver:
-      1) 边栏部分的 Top Pick
-      2) 文章以timeLine的形式显示出来 => Use "Load more" instead of "pagination"
-*/
-  body{
-      /*背景颜色*/
-      background-color:  #f1f4f9;
-  }
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+  /*
+    - CSS design by davidBear
+    - Last modified: 2015.07.24
+    - Ver: 0.2
+    - Introduction: 主要从立体 -> 拟物的设计
+    - Update in the next ver:
+        1) 边栏部分的 Top Pick
+        2) 文章以timeLine的形式显示出来 => Use "Load more" instead of "pagination"
+  */
+    body{
+        /*背景颜色*/
+        /*
+          background-color:  #f1f4f9;
+        */
+        background-color: #fafafa;
+    }
 
- .fa-eye, .fa-expand {
-   /*阅读的fa-icon*/
-   color: #bdc3c7;
-   padding-right: 2px; /* distance between icon and text*/
- }
 
- .page-header-layout-style{
-   /* header部分的排版*/
-   color: #34495e;
- }
- h1 .page-header{
-   /*主标题*/
-   font-size: 50px;
-   font-weight: bold;
- }
- h4 a{
-       color: #444444;
-       font-weight: normal;
+   .fa-eye, .fa-expand {
+     /*阅读的fa-icon*/
+     color: #bdc3c7;
+     padding-right: 2px; /* distance between icon and text*/
    }
- .page-header-small-style{
-   /*副标题*/
-   color: #A0A7AD;
-   font-size: 16px;
- }
-  .col-md-8{
-    /*文章主题部分，占全部比例的8/12*/
-    background-color: white;
-    border-right: 1px solid #ecf0f1;
-    border-top: 1px solid #34495e;
-    padding: 0px;
-  }
 
-  .col-md-8 > .col-md-12{
-    /*图片占据整个空间，所以设定padding=0px*/
-    padding: 0px;
-  }
-
-  .col-md-11 > h6{
-    /* 文章中显示发布时间的color */
-    color: #bdc3c7;
-  }
-
-  .description-style{
-    /*文章的描述文字*/
-    color:#7f8c8d;
-    line-height: 200%;
-  }
-
-  /* Definition of Image */
-  .img-thumbView{
-    float: right;
-    margin-left:20px;
-  }
-
-  .icon-tools{
-    position:relative;
-    height: 15px;
-    width: auto;
-    list-style-type: none;
-    padding-left: 0px;
-  }
-
-  .group{
-    /*主页面的小图片*/
-    /*
-      1. 发布时间
-      2. 阅读数
-    */
-    display: inline;
-    margin-right: 12px;
-    color: #bdc3c7;
-  }
-  .col-md-11{
-    /*消息
-    margin: 10px;*/
-    padding:20px;
-    padding-top: 5px;
-    border-bottom: 1px solid #ecf0f1;
+   .page-header-layout-style{
+     /* header部分的排版*/
+     color: #34495e;
+   }
+   h1 .page-header{
+     /*主标题*/
+     font-size: 50px;
+     font-weight: bold;
+   }
+   h4 a{
+         color: #444444;
+         font-weight: normal;
+     }
+   .page-header-small-style{
+     /*副标题*/
+     color: #A0A7AD;
+     font-size: 16px;
+   }
+    .col-md-8{
+      /*文章主题部分，占全部比例的8/12*/
+      background-color: white;
+      border-right: 1px solid #ecf0f1;
+      border-left: 1px solid #ecf0f1;
+      border-top: 1px solid #34495e;
+      padding: 0px;
     }
 
-  .event-cover-style{
-    /*banner，用于七联的活动宣传，以及未来广告的插入栏*/
-    /*figure will cross the whole column, which means ignore the padding*/
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-  }
-
-  /* Category CSS */
-  /*需要重新定义这个部分*/
-  a:hover{
-    color:#1abc9c;
-    text-decoration:none;
-  }
-  a:visited{
-    text-decoration: none;
-  }
-  a:active {
-    color: #FFFFFF;
-    background-color: #1abc9c;
-  }
-  a::after{
-    color:#1abc9c;
-  }
-
-  .side-bar-tags{
-    /*侧边栏的layout*/
-    margin: 10px;
-    padding:10px;
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color: #7f8c8d;
+    .col-md-8 > .col-md-12{
+      /* 图片占据整个空间，所以设定padding=0px */
+      padding: 0px;
     }
-  .ul-tags-style{
-    /*用来设定list*/
-    list-style-type: none;
-    padding: 0px;
-  }
-.ul-tags-style > .li-tags-style{
-    /*用来设定tag*/
-    color: #34495e;
-    margin-top: 5px;
-    line-height: 200%;
-  }
-    .tag-numbers-style{
-    /*用来显示tag中的数字*/
-    font-style: normal;
-    font-weight: bolder;
+
+    .col-md-8 > .col-md-11 > h6{
+      /* 网站主体*/
+      /* 文章中显示发布时间的color */
+      color: #bdc3c7;
+    }
+    .col-md-8 > .col-md-11{
+      /* 消息 */
+      padding:30px; /* 20px的目标是把event图片和文本之间的距离控制好 */
+      border-bottom: 1px solid #ecf0f1;
+      }
+    .description-style{
+      /*文章的描述文字*/
+      color:#7f8c8d;
+      line-height: 200%;
+    }
+    /* Definition of Image */
+    .img-thumbView{
+      float: right;
+      margin-left:20px;
+    }
+    .icon-tools{
+      position:relative;
+      height: 15px;
+      width: auto;
+      list-style-type: none;
+      padding-left: 0px;
+    }
+    .main-list-group{
+      /*主页面的小图片*/
+      /*
+        1. 发布时间
+        2. 阅读数
+      */
+      display: inline;
+      margin-right: 12px;
+      color: #bdc3c7;
+    }
+    .event-cover-style{
+      /*banner，用于七联的活动宣传，以及未来广告的插入栏*/
+      /*figure will cross the whole column, which means ignore the padding*/
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+    }
+
+    /* Category CSS */
+    /*需要重新定义这个部分*/
+    a:hover{
+      color:#1abc9c;
+      text-decoration:none;
+    }
+    a:visited{
+      text-decoration: none;
+    }
+    a:active {
+      color: #FFFFFF;
+      background-color: #1abc9c;
+    }
+    a::after{
+      color:#1abc9c;
+    }
+
+    .side-bar-tags{
+      /*侧边栏的layout*/
+      margin: 10px;
+      padding:10px;
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color:#868686;
+      }
+    .ul-tags-style{
+      /*用来设定list*/
+      list-style-type: none;
+      padding: 0px;
+    }
+  .ul-tags-style > .li-tags-style{
+      /*用来设定tag*/
+      color: #34495e;
+      margin-top: 5px;
+      line-height: 200%;
+    }
+  .tag-numbers-style{
+      /*用来显示tag中的数字*/
+      font-style: normal;
+      font-weight: bolder;
+      color: #95a5a6;
+      padding-left: 5px;
+      padding-right: 5px;
+      background-position: right;
+      float: right;
+    }
+  .tag-font-style{
+    /*分类浏览中的li部分的颜色*/
     color: #95a5a6;
-    padding-left: 5px;
-    padding-right: 5px;
-    background-position: right;
-    float: right;
   }
-.tag-font-style{
-  /*分类浏览中的li部分的颜色*/
-  color: #95a5a6;
-}
 
-.widget-col-md-4{
-  /*用来宣传我们的专栏文章*/
-  /*为了让图片可以在右侧占据整个部分，这里设定margin，padding为*/
-  /*带来的结果就是所有的其他的元素，都需要相对应的设定margin和padding*/
-  margin: 0px;
-  padding: 0px;
-}
-</style>
+  .sidebar-col-md-4{
+    /*用来宣传我们的专栏文章*/
+    /*为了让图片可以在右侧占据整个部分，这里设定margin，padding为*/
+    /*带来的结果就是所有的其他的元素，都需要相对应的设定margin和padding*/
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+    .sidebar-section-title{
+      /*定义所有sidebar的每一个section的title*/
+      font-weight: bolder;
+    }
+    .sidebar-topPick-block{
+      /*针对side-bar block的定义*/
+      display: block;
+      padding: 5px;
+      border-bottom-style: solid;
+      border-width: 1px;
+      border-bottom-color: #eeeeee;
+      color:#7f8c8d;
+      font-size: 13px;
+    }
+    .side-bar-topPick-description{
+      /*描述性文字的定义*/
+      line-height: 150%;
+      opacity: 100%;
+    }
+    .sidebar-topPick-block > h4{
+      font-size: 15px;
+    }
+    .fa-star{
+      /*对小星星的定义*/
+      color: #f1c40f;
+      margin-right: 3px;
+    }
+    .fa-tages,.fa-thumb-tack{
+      margin-right: 5px;
+    }
+  </style>
 
 </head>
-
 <body>
-
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
+            <!-- Brand and toggle get main-list-grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -289,9 +318,7 @@
 
     <!-- Page Content -->
     <div class="container">
-
         <div class="row">
-
             <!-- Blog Entries Column -->
             <div class="col-md-8">
                   <div class="col-md-11">
@@ -302,9 +329,9 @@
 
                   <h6>
                     <ul class="icon-tools">
-                      <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
-                      <li class="group"><i class="fa fa-eye"></i>1000+</li>
-                      <li class="group"><span class="label label-info" style="b"><i class="fa fa-tag"></i>ES对策</span>
+                      <li class="main-list-group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
+                      <li class="main-list-group"><i class="fa fa-eye"></i>1000+</li>
+                      <li class="main-list-group"><span class="label label-info" style="b"><i class="fa fa-tag"></i>ES对策</span>
                       </li>
                     </ul><!-- end of icon-->
                   </h6>
@@ -321,9 +348,9 @@
                       </a><!-- end of imageView -->
                       <h6>
                         <ul class="icon-tools">
-                          <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
-                          <li class="group"><i class="fa fa-eye"></i>1000+</li>
-                          <li class="group"><span class="label label-info" style="b"><i class="fa fa-tag"></i>ES对策</span>
+                          <li class="main-list-group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
+                          <li class="main-list-group"><i class="fa fa-eye"></i>1000+</li>
+                          <li class="main-list-group"><span class="label label-info" style="b"><i class="fa fa-tag"></i>ES对策</span>
                         </ul><!-- end of icon-->
                       </h6>
                       <p class="description-style">
@@ -336,9 +363,9 @@
                       <h4><a href="#">就职课程</a></h4>
                       <h6>
                         <ul class="icon-tools">
-                          <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
-                          <li class="group"><i class="fa fa-eye"></i>1000+</li>
-                          <li class="group"><span class="label label-danger"><i class="fa fa-tag"></i>七联就职讲座</span>
+                          <li class="main-list-group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
+                          <li class="main-list-group"><i class="fa fa-eye"></i>1000+</li>
+                          <li class="main-list-group"><span class="label label-danger"><i class="fa fa-tag"></i>七联就职讲座</span>
                         </ul><!-- end of icon-->
                       </h6>
                       <p class="description-style">
@@ -349,8 +376,6 @@
                       </div><!-- countdown -->
 
                     </div><!--用于课程-->
-
-
                     <div class="col-md-11">
                       <h4><a href="#">如何在说明会上脱颖而出</a></h4>
                       <a href="blog-post.html">
@@ -358,8 +383,8 @@
                       </a><!-- end of imageView -->
                       <h6>
                         <ul class="icon-tools">
-                          <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
-                          <li class="group"><i class="fa fa-eye"></i>1000+</li>
+                          <li class="main-list-group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
+                          <li class="main-list-group"><i class="fa fa-eye"></i>1000+</li>
                         </ul><!-- end of icon-->
                       </h6>
                       <p class="description-style">
@@ -378,9 +403,9 @@
                           <img class="img-responsive img-hover img-thumbView" src="http://placehold.it/105X105" alt="">
                       <h6>
                         <ul class="icon-tools">
-                          <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
-                          <li class="group"><i class="fa fa-eye"></i>1000+</li>
-                          <li class="group"><span class="label label-info" style="b"><i class="fa fa-tag"></i>专栏</span>
+                          <li class="main-list-group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
+                          <li class="main-list-group"><i class="fa fa-eye"></i>1000+</li>
+                          <li class="main-list-group"><span class="label label-info" style="b"><i class="fa fa-tag"></i>专栏</span>
                         </ul><!-- end of icon-->
                       </h6>
                       <p class="description-style">
@@ -395,8 +420,8 @@
                       </a><!-- end of imageView -->
                       <h6>
                         <ul class="icon-tools">
-                          <li class="group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
-                          <li class="group"><i class="fa fa-eye"></i>1000+</li>
+                          <li class="main-list-group"><i class="fa fa-clock-o"></i> 2015年5月01日(金) 18:00</li>
+                          <li class="main-list-group"><i class="fa fa-eye"></i>1000+</li>
                         </ul><!-- end of icon-->
                       </h6>
                       <p class="description-style">
@@ -407,7 +432,7 @@
                     </div><!--end of the first passage-->
 
               </div><!-- col-md-8 -->
-              <div class="col-md-4 widget-col-md-4">
+              <div class="col-md-4 sidebar-col-md-4">
                   <div class="col-md-12 side-bar-tags">
                     <h4 class="sidebar-section-title"><i class="fa fa-tags"></i> 分类浏览</h4>
                     <ul class="ul-tags-style"> <!-- <em class="tag-numbers-style" > </em>-->
@@ -428,88 +453,50 @@
                       <li class="li-tags-style"><a class="tag-font-style" href="#">外資</a> <em class="tag-numbers-style" >15</em></li>
                       <li class="li-tags-style"><a class="tag-font-style" href="#">インタンーシプ</a> <em class="tag-numbers-style" >200</em></li>
                       </ul>
+                 </div>
+                  <div class="col-md-12 side-bar-tags"><!-- 5 Top Picks Articles -->
+                    <h4 class="sidebar-section-title"><i class="fa fa-thumb-tack"></i>人气推荐</h4>
+                    <div class="sidebar-topPick-block">
+                      <h4>
+                        <a href=#>
+                        <i class="fa fa-star"></i>ES通关的NB方法</a>
+                      </h4>
+                      <p class="side-bar-topPick-description">
+                        所有公司的招聘过程都是从提交ES开始，通过这一关，我们才能得到机会向公司展现自己的实力。今天，我们就来谈一谈ES通关的方法，虽然不是绝对，但希望能帮助大家更快的进入到就职过程的下一个阶段.
+                      </p>
                     </div>
-
-
-                    <style>
-
-                      .sidebar-section-title{
-                        /*定义所有sidebar的每一个section的title*/
-                        font-weight: bolder;
-                      }
-                      .sidebar-topPick-block{
-                        /*针对side-bar block的定义*/
-                        display: block;
-                        padding: 5px;
-                        border-bottom-style: solid;
-                        border-width: 1px;
-                        color:#7f8c8d;
-                        opacity: 0.7;
-                      }
-                      .fa-star{
-                        /*对小星星的定义*/
-                        color: #f1c40f;
-                      }
-
-                      .fa-tages,.fa-thumb-tack{
-                        margin-right: 5px;
-                      }
-
-                      .side-bar-topPick-description{
-                        /*描述性文字的定义*/
-                        line-height: 150%;
-                        color:#7f8c8d
-                      };
-                    </style>
-                    <div class="col-md-12 side-bar-tags"><!-- 5 Top Picks Articles -->
-                      <h4 class="sidebar-section-title"><i class="fa fa-thumb-tack"></i>人气推荐</h4>
-                      <div class="sidebar-topPick-block">
-                        <h4>
-                          <a href=#>
-                          <i class="fa fa-star"></i>【ES策划】ES通关的NB方法</a>
-                        </h4>
-                        <p class="side-bar-topPick-description">
-                          所有公司的招聘过程都是从提交ES开始，通过这一关，我们才能得到机会向公司展现自己的实力。今天，我们就来谈一谈ES通关的方法，虽然不是绝对，但希望能帮助大家更快的进入到就职过程的下一个阶段.
-                        </p>
-                      </div>
-                      <div class="sidebar-topPick-block">
-                        <h4>
-                          <a href=#>
-                          <i class="fa fa-star"></i>如何在说明会上脱颖而出<</a>
-                        </h4>
-                        <p class="side-bar-topPick-description">
-                          介绍的部分文字有限
-                        </p>
-                      </div>
-                      <div class="sidebar-topPick-block">
-                        <h4>
-                          <a href=#>
-                          <i class="fa fa-star"></i>【长文本】长文本</a>
-                        </h4>
-                        <p class="side-bar-topPick-description">
-                          长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
-                          长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
-                          长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
-                          长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
-                          长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
-                          长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
-                        </p>
-                      </div>
-                    </div><!-- end of top 3-->
-
-
-
+                    <div class="sidebar-topPick-block">
+                      <h4>
+                        <a href=#>
+                        <i class="fa fa-star"></i>如何在说明会上脱颖而出</a>
+                      </h4>
+                      <p class="side-bar-topPick-description">
+                        介绍的部分文字有限
+                      </p>
+                    </div>
+                    <div class="sidebar-topPick-block">
+                      <h4>
+                        <a href=#>
+                        <i class="fa fa-star"></i>【长文本】长文本</a>
+                      </h4>
+                      <p class="side-bar-topPick-description">
+                        长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
+                        长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
+                        长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
+                        长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
+                        长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
+                        长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
+                      </p>
+                    </div>
+                  </div><!-- end of top 3-->
+                  <!--
+                  <div class="col-md-12 side-bar-tags">
+                    <h4 class="sidebar-section-title"><i class="fa fa-tags"></i> 分类浏览</h4>
+                  </div>
+                  -->
 
           </div><!-- end of row -->
-
-
-
-
-
-
-
         <hr>
-
         <!-- Footer -->
         <footer>
             <div class="row">
